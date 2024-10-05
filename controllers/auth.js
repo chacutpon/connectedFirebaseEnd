@@ -14,7 +14,7 @@ exports.createAndUpdateUser = async (req, res) => {
         let role = 'user'; 
 
         // ตรวจสอบว่าอีเมลลงท้ายด้วย @kmutnb.ac.th หรือ @sci.kmutnb.ac.th หรือไม่
-        const teacherEmailRegex = /^[^\s@]+@(kmutnb\.ac\.th|sci\.kmutnb\.ac\.th)$/;
+        const teacherEmailRegex = /^[^\s@]+@(kmutnb\.ac\.th|sci\.kmutnb\.ac\.th|email\.kmutnb\.ac\.th)$/;
         if (teacherEmailRegex.test(email)) {
             role = 'teacher'; 
         }
